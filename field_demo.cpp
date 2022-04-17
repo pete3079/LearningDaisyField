@@ -210,6 +210,7 @@ void UpdateOctave(){
 		int start_note2=int(knob_vals[6]*100+12);
 	        for(unsigned int i=0;i<8;i++){
 			// mtof is a helper function that translates MIDI# to frequency in Hz - SetFreq want's Hz
+			// see https://en.wikipedia.org/wiki/Piano_key_frequencies
 			v[i].osc_.SetFreq(mtof(start_note1+i));
 			v[i+8].osc_.SetFreq(mtof(start_note2+i));
 		}
